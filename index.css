@@ -1,0 +1,348 @@
+:root {
+    --basefontSize: 16px;
+    --SubfontSize: 14px;
+    --basefontSize: 16px;
+    --basefontWeight: 200;
+    --black:#2A2A2A;
+    --redexPro: "Readex Pro", sans-serif;
+    --greyColor: #cdcdcd;
+    --sectionHeadingFontSize: 24px;
+    --bgGrey: #ebebeb;
+
+
+
+  }
+
+
+  body{
+    margin: 0;
+  }
+
+
+.dashboard_container{
+    display: flex;
+    height: 100vh;
+}
+.dashboard_container_left{
+    padding: 4px 8px 4px 8px;
+    gap: 0px;
+    border: 0px 1px 0px 0px;
+    opacity: 0px;
+    position: fixed;
+    background-color: #f6f6f6;
+    height: 100vw;
+    
+}
+.dashboard_container_left_heading{
+     font-family: var(--redexPro);
+font-size: var(--basefontSize);
+font-weight: var(--basefontWeight);
+line-height: 20px;
+text-align: left;
+color:var(--black);
+
+}
+
+.dashboard_container_right{
+    padding-left: calc(18vw + 8px);
+    flex-grow: 1;
+}
+
+@media only screen and (min-width: 500px) {
+    .dashboard_container_left{
+         min-width: 16vw;
+    }
+  }
+
+
+  .sidetabs_container{
+
+  }
+
+
+  .navs_container{
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 14px;
+  }
+
+  .nav_box{
+    width: 20px;
+height: 20px;
+gap: 0px;
+border-radius: 4px;
+background-color: var(--greyColor);
+
+
+  }
+
+
+  .nav_content{
+    width: 100px;
+height: 14px;
+gap: 0px;
+border-radius: 4px;
+background-color: var(--greyColor);
+font-family: var(--redexPro);
+font-size: var(--SubfontSize);
+
+  }
+
+  .transparent-bg{
+    background-color: transparent !important;
+  }
+
+  .color-black{
+    background-color: black;
+    border-radius: 50%;
+
+  }
+
+
+  .section_container{}
+
+  .section_heading{
+    font-size: var(--sectionHeadingFontSize);
+    font-weight: 600;
+    font-family: var(--redexPro);
+    margin-top: 2rem;
+    margin-bottom: 1.3rem;
+  }
+
+
+
+  .tabs_container{
+    display: flex;
+    gap: 2px;
+  }
+
+
+  .tab{
+    width: 64px;
+    height: 17px;
+    padding: 8px 12px 8px 12px;
+    border-radius: 8px;
+    border-bottom: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--redexPro);
+    font-size: var(--SubfontSize);
+    font-weight: 300;
+    cursor: pointer;
+
+  }
+
+  .tab:hover{
+    background: #ebebeb;
+    transition: all ease-out;
+  }
+
+
+  .tab.active {
+    background: #ebebeb;
+    font-weight: 400;
+}
+.content {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+}
+.content.active {
+    display: block;
+}
+
+
+
+
+
+/* table css */
+
+.table-container {
+    width: 80%;
+    max-width: 1000px;
+    overflow-x: auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: #e0e0e0;
+    height: 16px;
+    /* border-radius: 4px; */
+}
+
+td {
+    height: 12px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+
+/* Adjusting the header */
+.header {
+    background-color: var(bgGrey);
+    height: 32px;
+    
+
+}
+
+
+.skeleton{
+    background-color: #d0d0d0;
+    border-radius: 4px;
+    height: 20px;
+}
+
+/* Add circles to the first column cells */
+.circle {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+
+
+/* modal css */
+::backdrop {
+   background-color: grey;
+    opacity: 0.75;
+  }
+
+
+  dialog{
+box-shadow: 6px -6px 160px 0px rgba(0, 0, 0, 0.2);
+border-radius: 10px;
+border: none;
+padding: 0px;
+overflow-y: hidden;
+
+  }
+
+
+
+  .top_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+
+.modal_title{
+    font-size: 20px;
+    font-family:var(--redexPro);
+}
+
+
+@media only screen and (min-width: 1100px) {
+    dialog {
+        width: 90vw;
+    height: 88vh;
+    }
+  }
+
+/* Media query for medium screens */
+@media only screen and (min-width: 900px) and (max-width: 1099px) {
+    dialog {
+        width: 45vw;
+        height: 60vh;
+    }
+}
+
+
+.modal_content{
+    padding: 1rem;
+    overflow-y: scroll;
+    position: relative;
+    height: 73%;
+}
+
+
+.button_container{
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 1rem;
+}
+
+.cancel-btn{
+width: 68px;
+height:32px;
+padding: 0px 12px 0px 12px;
+gap: 4px;
+border-radius: 8px;
+border: 1px;
+background: rgba(255, 255, 255, 1);
+border: 1px solid rgba(0, 0, 0, 0.08)
+
+}
+
+.okay-btn{
+    width: Hug (43px)px;
+height: Fixed (32px)px;
+padding: 0px 12px 0px 12px;
+gap: 4px;
+border-radius: 8px;
+border: 1px;
+background: rgba(0, 0, 0, 1);
+border: 1px solid rgba(0, 0, 0, 0.08);
+color: white;
+
+}
+
+
+#openModal{
+    margin-bottom: 1rem;
+    width: fit-content;
+height:32px;
+padding: 0px 12px 0px 12px;
+gap: 4px;
+border-radius: 8px;
+background: rgba(0, 0, 0, 1);
+border: 1px solid rgba(0, 0, 0, 0.08);
+color: white;
+}
+
+/* Autofocus (and focus) styling */
+button#openModal:focus {
+    box-shadow: 0 0 8px rgba(70, 70, 70, 0.5); /* Adds a shadow for emphasis */
+    outline: none; /* Removes default outline */
+}
+
+
+#modalClose{
+    background: transparent;
+    color: gray;
+    font-weight: 700;
+}
+button#modalClose:focus {
+    box-shadow: 0 0 8px rgba(70, 70, 70, 0.5); /* Adds a shadow for emphasis */
+    outline: none; /* Removes default outline */
+    border: none;
+}
+
+
+
+
+
+
+
+  
