@@ -76,6 +76,13 @@ function closeDialog(){
     dialog.close();
 }
 
+// Add an event listener for the Escape key
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        closeDialog();
+    }
+});
+
 
 
 
